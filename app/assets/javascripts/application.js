@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require ./vendor/jquery-serializejson
+//= require ./vendor/underscore-min
+//= require ./vendor/backbone-min
+//= require ./vendor/backbone-relational
 //= require_tree .
