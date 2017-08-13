@@ -20,6 +20,7 @@ window.SwotBoard = {
   Views: {},
   Routers:{},
   initialize: function(){
+    console.log('this is workin')
     Backbone.history.start();
   }
 }
