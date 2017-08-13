@@ -1,0 +1,20 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$teal: #32B6B7;
+$coal: #393838;
+$grey: #C3C5C5;
+$white: #F9F9F9;
+
+body{
+  margin: 0!important;
+  width: auto;
+  padding: 0;
+  height: 100%;
+  background-color: $white;
+  *{
+    box-sizing: border-box;
+  }
+}
+
