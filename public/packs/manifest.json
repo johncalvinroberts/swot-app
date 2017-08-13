@@ -1,0 +1,4 @@
+{
+  "hello_react.js": "http://0.0.0.0:8080/packs/hello_react.js",
+  "swotboard.js": "http://0.0.0.0:8080/packs/swotboard.js"
+}
