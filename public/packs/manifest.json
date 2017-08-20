@@ -1,4 +1,7 @@
 {
-  "hello_react.js": "http://0.0.0.0:8080/packs/hello_react.js",
-  "swotboard.js": "http://0.0.0.0:8080/packs/swotboard.js"
+  "swotboard.js": "http://0.0.0.0:8080/packs/swotboard.js",
+  "swotboard/components/main-component.js": "http://0.0.0.0:8080/packs/swotboard/components/main-component.js",
+  "swotboard/router.js": "http://0.0.0.0:8080/packs/swotboard/router.js",
+  "swotboard/views/baseview.js": "http://0.0.0.0:8080/packs/swotboard/views/baseview.js",
+  "swotboard/views/mainview.js": "http://0.0.0.0:8080/packs/swotboard/views/mainview.js"
 }
