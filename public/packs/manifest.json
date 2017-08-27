@@ -1,7 +1,11 @@
 {
   "swotboard.js": "http://0.0.0.0:8080/packs/swotboard.js",
+  "swotboard/components/addboard-component.js": "http://0.0.0.0:8080/packs/swotboard/components/addboard-component.js",
+  "swotboard/components/boards-component.js": "http://0.0.0.0:8080/packs/swotboard/components/boards-component.js",
   "swotboard/components/main-component.js": "http://0.0.0.0:8080/packs/swotboard/components/main-component.js",
   "swotboard/router.js": "http://0.0.0.0:8080/packs/swotboard/router.js",
+  "swotboard/views/addboard.js": "http://0.0.0.0:8080/packs/swotboard/views/addboard.js",
   "swotboard/views/baseview.js": "http://0.0.0.0:8080/packs/swotboard/views/baseview.js",
+  "swotboard/views/boards.js": "http://0.0.0.0:8080/packs/swotboard/views/boards.js",
   "swotboard/views/mainview.js": "http://0.0.0.0:8080/packs/swotboard/views/mainview.js"
 }

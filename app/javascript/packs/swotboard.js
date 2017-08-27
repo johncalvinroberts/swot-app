@@ -6,8 +6,8 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-import Backbone from 'backbone/backbone'
 import $ from 'jquery/dist/jquery'
+import Backbone from 'backbone/backbone'
 import React from 'react'
 import Router from './swotboard/router'
 import MainView from './swotboard/views/mainview'
