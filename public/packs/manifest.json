@@ -4,7 +4,7 @@
   "swotboard/components/board-view-component.js": "http://0.0.0.0:8080/packs/swotboard/components/board-view-component.js",
   "swotboard/components/boards-view-component.js": "http://0.0.0.0:8080/packs/swotboard/components/boards-view-component.js",
   "swotboard/components/main-component.js": "http://0.0.0.0:8080/packs/swotboard/components/main-component.js",
-  "swotboard/controllers/boards-view-controller.js": "http://0.0.0.0:8080/packs/swotboard/controllers/boards-view-controller.js",
+  "swotboard/controllers/boards-controller.js": "http://0.0.0.0:8080/packs/swotboard/controllers/boards-controller.js",
   "swotboard/models/board-model.js": "http://0.0.0.0:8080/packs/swotboard/models/board-model.js",
   "swotboard/models/boards-collection.js": "http://0.0.0.0:8080/packs/swotboard/models/boards-collection.js",
   "swotboard/router.js": "http://0.0.0.0:8080/packs/swotboard/router.js",

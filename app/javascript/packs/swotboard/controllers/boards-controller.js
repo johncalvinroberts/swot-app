@@ -1,6 +1,7 @@
 import BoardsView from '../views/boards-view'
 import BoardView from '../views/board-view'
 import BoardsCollection from '../models/boards-collection'
+import BoardModel from '../models/board-model'
 
 const BoardsController = function(options){
   let swotBoard = options.swotBoard
@@ -14,7 +15,13 @@ const BoardsController = function(options){
       swotBoard.mainView.pageRender(boardsView)
     },
     show: function(id){
-      console.log(id)
+      let board = new BoardModel({
+        id: id
+      })
+      var boardView = new BoardView({
+        board: board
+      })
+      swotBoard.mainView.pageRender(boardView)
     }
   }
 }

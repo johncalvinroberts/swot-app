@@ -33,9 +33,10 @@ SwotBoard.prototype.initialize = function(){
 
 SwotBoard.prototype.showApp = function(){
   this.mainView.render()
+  var self = this
   $('body').on('click', 'a[href^="/"]', function(e){
     e.preventDefault()
-    this.router.navigate($(this).attr('href'), {trigger: true})
+    self.router.navigate($(this).attr('href'), {trigger: true})
   })
 
   Backbone.history.start({pushState: true})

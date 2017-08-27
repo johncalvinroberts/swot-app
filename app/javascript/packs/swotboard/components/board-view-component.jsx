@@ -1,18 +1,17 @@
-// import React from 'react'
-// import ReactBackbone from  'react.backbone'
-// import PropTypes from 'prop-types'
-// import BoardViewComponent from './boards-view-component'
+import React from 'react'
+import ReactBackbone from  'react.backbone'
+import PropTypes from 'prop-types'
 
-// const BoardViewComponent = React.createBackboneClass({
-//   handleAddBoard: function(board){
-//     var boards = this.getCollection()
-//     boards.add(board)
-//   },
-//   render: function(){
-//     return (
-//           <BoardsViewComponent boards={this.getCollection()} addBoard={this.handleAddBoard}/>
-//     )
-//   }
-// })
 
-// export default BoardViewComponent
+const BoardViewComponent = React.createBackboneClass({
+  render: function(){
+    debugger
+    return (
+      <div>
+        <h1>{this.getModel().get("name")}</h1>
+      </div>
+    )
+  }
+})
+
+export default BoardViewComponent
