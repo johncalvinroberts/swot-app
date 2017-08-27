@@ -11,13 +11,19 @@ import Backbone from 'backbone/backbone'
 import React from 'react'
 import Router from './swotboard/router'
 import MainView from './swotboard/views/mainview'
+import BoardsController from './swotboard/controllers/boards-controller'
 
 const SwotBoard = function(){
   this.initialize()
 }
 
 SwotBoard.prototype.initialize = function(){
-  this.router = new Router()
+
+  this.router = new Router({
+    controllers:{
+      boards: new BoardsController({swotBoard: this})
+    }
+  })
   this.mainView = new MainView({
     el: $('#swotboard-root'),
     router: this.router
@@ -27,7 +33,12 @@ SwotBoard.prototype.initialize = function(){
 
 SwotBoard.prototype.showApp = function(){
   this.mainView.render()
-  Backbone.history.start()
+  $('body').on('click', 'a[href^="/"]', function(e){
+    e.preventDefault()
+    this.router.navigate($(this).attr('href'), {trigger: true})
+  })
+
+  Backbone.history.start({pushState: true})
 }
 
 document.addEventListener('DOMContentLoaded', () => {

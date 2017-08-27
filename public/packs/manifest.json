@@ -1,11 +1,15 @@
 {
   "swotboard.js": "http://0.0.0.0:8080/packs/swotboard.js",
-  "swotboard/components/addboard-component.js": "http://0.0.0.0:8080/packs/swotboard/components/addboard-component.js",
-  "swotboard/components/boards-component.js": "http://0.0.0.0:8080/packs/swotboard/components/boards-component.js",
+  "swotboard/components/board-list-item.js": "http://0.0.0.0:8080/packs/swotboard/components/board-list-item.js",
+  "swotboard/components/board-view-component.js": "http://0.0.0.0:8080/packs/swotboard/components/board-view-component.js",
+  "swotboard/components/boards-view-component.js": "http://0.0.0.0:8080/packs/swotboard/components/boards-view-component.js",
   "swotboard/components/main-component.js": "http://0.0.0.0:8080/packs/swotboard/components/main-component.js",
+  "swotboard/controllers/boards-view-controller.js": "http://0.0.0.0:8080/packs/swotboard/controllers/boards-view-controller.js",
+  "swotboard/models/board-model.js": "http://0.0.0.0:8080/packs/swotboard/models/board-model.js",
+  "swotboard/models/boards-collection.js": "http://0.0.0.0:8080/packs/swotboard/models/boards-collection.js",
   "swotboard/router.js": "http://0.0.0.0:8080/packs/swotboard/router.js",
-  "swotboard/views/addboard.js": "http://0.0.0.0:8080/packs/swotboard/views/addboard.js",
   "swotboard/views/baseview.js": "http://0.0.0.0:8080/packs/swotboard/views/baseview.js",
-  "swotboard/views/boards.js": "http://0.0.0.0:8080/packs/swotboard/views/boards.js",
+  "swotboard/views/board-view.js": "http://0.0.0.0:8080/packs/swotboard/views/board-view.js",
+  "swotboard/views/boards-view.js": "http://0.0.0.0:8080/packs/swotboard/views/boards-view.js",
   "swotboard/views/mainview.js": "http://0.0.0.0:8080/packs/swotboard/views/mainview.js"
 }

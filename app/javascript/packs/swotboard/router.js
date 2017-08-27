@@ -1,16 +1,11 @@
-const Router = Backbone.Router.extend({
-    navigate: function(fragment, options) {
-      options = options || {};
-      options.trigger = !(options.trigger === false);
-      Backbone.Router.prototype.navigate.call(this, fragment, options);
-    },
-    initialize: function(){
-      this.route('*path', 'index')
-      this.route('home', 'home')
-    },
-    index: function(){
-      this.navigate('home', { replace: true });
+import BoardView from './views/board-view'
+import BackboneRouteControl from 'backbone-route-control'
+
+const Router = BackboneRouteControl.extend({
+    routes: {
+      '': 'boards#index',
+      'boards/:id': 'boards#show',
     }
-  });
+  })
 
 export default Router
