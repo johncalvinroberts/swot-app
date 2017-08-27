@@ -10,9 +10,13 @@ const BoardsViewComponent = React.createBackboneClass({
   ],
   handleSubmit: function(e){
     e.preventDefault()
+    let self = this
     let name = this.refs.name.value
     let board = new BoardModel({name: name})
-    this.props.boards.add(board)
+    board.save().done(function(){
+      console.log('finished that shit')
+      self.props.boards.add(board)
+    })
   },
   render: function(){
     let boardList = this.props.boards.map(function(board){

@@ -9,19 +9,23 @@ const BoardsController = function(options){
     index: function(){
       console.log('hitting index')
       let boardsCollection = new BoardsCollection()
-      let boardsView = new BoardsView({
-        boards: boardsCollection
+      boardsCollection.fetch().done(function(){
+        let boardsView = new BoardsView({
+          boards: boardsCollection
+        })
+        swotBoard.mainView.pageRender(boardsView)
       })
-      swotBoard.mainView.pageRender(boardsView)
     },
     show: function(id){
       let board = new BoardModel({
         id: id
       })
-      var boardView = new BoardView({
-        board: board
+      board.fetch().done(function(){
+        let boardView = new BoardView({
+          board: board
+        })
+        swotBoard.mainView.pageRender(boardView)
       })
-      swotBoard.mainView.pageRender(boardView)
     }
   }
 }

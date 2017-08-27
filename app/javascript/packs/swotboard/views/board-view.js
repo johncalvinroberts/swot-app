@@ -11,8 +11,6 @@ const BoardView = BaseView.extend({
     let component = React.createFactory(BoardViewComponent)
     let board = this.options.board
     return component({model: board})
-    // let board = this.options.board
-    // return<BoardViewComponent model={board}/>
   }
 })
 
