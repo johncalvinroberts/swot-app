@@ -22,13 +22,14 @@ class Api::BoardsController < ApplicationController
   end
 
   def update
-    board = Boards.find(params[:id])
+    board = Board.find(params[:id])
     if board.update_attributes(board_params)
       render json: board, status: :ok
     else
       render nothing: true, status: :unprocessable_entity
     end
   end
+
   private
 
   def board_params

@@ -7,9 +7,9 @@ const BoardsController = function(options){
   let swotBoard = options.swotBoard
   return {
     index: function(){
-      console.log('hitting index')
       let boardsCollection = new BoardsCollection()
       boardsCollection.fetch().done(function(){
+        console.log('fetched boards')
         let boardsView = new BoardsView({
           boards: boardsCollection
         })
