@@ -9,7 +9,7 @@ const MainComponent = React.createBackboneClass({
   },
   render: function(){
     return (
-      <div>
+      <div className="container">
         <div className="navbar"></div>
         <h1>Swotboard</h1>
         <div id="main-container"></div>
