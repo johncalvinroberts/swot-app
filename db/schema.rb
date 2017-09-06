@@ -15,29 +15,29 @@ ActiveRecord::Schema.define(version: 20170710233030) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "boards", force: :cascade do |t|
-    t.string   "description"
-    t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "boards", id: :serial, force: :cascade do |t|
+    t.string "description"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "cards", force: :cascade do |t|
-    t.string   "category"
-    t.string   "description"
-    t.integer  "position"
-    t.integer  "board_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["board_id"], name: "index_cards_on_board_id", using: :btree
+  create_table "cards", id: :serial, force: :cascade do |t|
+    t.string "category"
+    t.string "description"
+    t.integer "position"
+    t.integer "board_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_cards_on_board_id"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.string   "description"
-    t.integer  "card_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["card_id"], name: "index_comments_on_card_id", using: :btree
+  create_table "comments", id: :serial, force: :cascade do |t|
+    t.string "description"
+    t.integer "card_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_comments_on_card_id"
   end
 
   add_foreign_key "cards", "boards"
