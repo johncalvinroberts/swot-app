@@ -17,7 +17,14 @@ const AddCardComponent = React.createBackboneClass({
     card.save().done(function(){
       console.log('added the card')
     })
-    //also need to add it to collection
+    /*
+      Also need to add the card to a collection here,
+      not sure if should have collection be for all cards, or collection for each category
+      also not sure if cards should be pulled with the board(active model serializer)
+      or pulled as a collection itself...
+      i'm leaning towards having them be pulled with the board, then 4 card collections are
+      instantiated. individual cards are saved/updated to DB on restful endpoint by self.
+    */
   },
   render: function(){
     return(
