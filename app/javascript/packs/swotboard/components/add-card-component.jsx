@@ -15,10 +15,11 @@ const AddCardComponent = React.createBackboneClass({
       position: 1
     })
     card.save().done(function(){
+      self.props.collection.add(card)
       console.log('added the card')
     })
     /*
-      Also need to add the card to a collection here,
+      Also need to create model and add the card to a collection here,
       not sure if should have collection be for all cards, or collection for each category
       also not sure if cards should be pulled with the board(active model serializer)
       or pulled as a collection itself...

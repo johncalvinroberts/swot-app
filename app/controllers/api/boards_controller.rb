@@ -8,8 +8,10 @@ class Api::BoardsController < ApplicationController
 
   def show
     board = Board.find(params[:id])
-
-    render json: board
+    cards = Card.where(board_id: board.id)
+    response = board.as_json
+    response["cards"] = cards.as_json
+    render json: response
   end
 
   def create

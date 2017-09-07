@@ -6,17 +6,20 @@ import CardList from './card-list-component'
 
 
 const BoardViewComponent = React.createBackboneClass({
+  mixins: [
+     React.BackboneMixin('board')
+  ],
   render: function(){
     return (
       <div>
         <h3 className="text-center">{this.getModel().get("name")}</h3>
         <div className="row">
-          <CardList board_id={this.getModel().get("id")} category="strengths"/>
-          <CardList board_id={this.getModel().get("id")} category="weakness"/>
+          <div id="strengths"></div>
+          <div id="opportunities"></div>
         </div>
         <div className="row">
-          <CardList board_id={this.getModel().get("id")} category="opportunities"/>
-          <CardList board_id={this.getModel().get("id")} category="threats"/>
+          <div id="weaknesses"></div>
+          <div id="threats"></div>
         </div>
       </div>
     )

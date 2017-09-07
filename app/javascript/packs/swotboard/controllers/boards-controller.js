@@ -20,7 +20,7 @@ const BoardsController = function(options){
       let board = new BoardModel({
         id: id
       })
-      board.fetch().done(function(){
+      board.fetch().done(function(model, res){
         let boardView = new BoardView({
           board: board
         })
