@@ -11,9 +11,11 @@
   "swotboard/models/board-model.js": "http://0.0.0.0:8080/packs/swotboard/models/board-model.js",
   "swotboard/models/boards-collection.js": "http://0.0.0.0:8080/packs/swotboard/models/boards-collection.js",
   "swotboard/models/card-model.js": "http://0.0.0.0:8080/packs/swotboard/models/card-model.js",
+  "swotboard/models/cards-collection.js": "http://0.0.0.0:8080/packs/swotboard/models/cards-collection.js",
   "swotboard/router.js": "http://0.0.0.0:8080/packs/swotboard/router.js",
   "swotboard/views/baseview.js": "http://0.0.0.0:8080/packs/swotboard/views/baseview.js",
   "swotboard/views/board-view.js": "http://0.0.0.0:8080/packs/swotboard/views/board-view.js",
   "swotboard/views/boards-view.js": "http://0.0.0.0:8080/packs/swotboard/views/boards-view.js",
+  "swotboard/views/cards-view.js": "http://0.0.0.0:8080/packs/swotboard/views/cards-view.js",
   "swotboard/views/mainview.js": "http://0.0.0.0:8080/packs/swotboard/views/mainview.js"
 }

@@ -9,9 +9,8 @@ const CardList = React.createBackboneClass({
      React.BackboneMixin('cards')
   ],
   render: function(){
-    debugger
-    let cardList = this.getCollection().map(function(card){
-      return <CardComponent model={card} key={card.id}/>
+    let cardList = this.getCollection().map((card)=>{
+      return <CardComponent model={card} key={card.id} category={this.props.category}/>
     })
     return (
         <div className="col-6">

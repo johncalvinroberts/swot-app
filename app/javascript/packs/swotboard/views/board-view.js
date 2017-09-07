@@ -30,10 +30,13 @@ const BoardView = BaseView.extend({
     this.makeComponent(threats, 'threats')
   },
   makeComponent: function(array, selector){
+    let boardId = this.options.board.attributes.id
     let collection = new CardsCollection()
     collection.add(array)
     let CardList = React.createFactory(CardListComponent)
-    let cardList = CardList({collection: collection})
+    let cardList = CardList({
+        collection: collection,
+        category: 'selector'})
 
     _.delay(function(){
       ReactDOM.render(cardList, document.getElementById(selector))
