@@ -36,7 +36,8 @@ const BoardView = BaseView.extend({
     let CardList = React.createFactory(CardListComponent)
     let cardList = CardList({
         collection: collection,
-        category: 'selector'})
+        category: selector,
+        board_id: boardId})
 
     _.delay(function(){
       ReactDOM.render(cardList, document.getElementById(selector))

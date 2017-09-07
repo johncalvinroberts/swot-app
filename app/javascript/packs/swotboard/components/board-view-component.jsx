@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactBackbone from  'react.backbone'
 import PropTypes from 'prop-types'
-import AddCardComponent from './add-card-component'
 import CardList from './card-list-component'
 
 
