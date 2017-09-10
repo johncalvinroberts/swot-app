@@ -3,18 +3,45 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $teal: #32B6B7;
-$coal: #393838;
+$black: #393838;
 $grey: #C3C5C5;
 $white: #F9F9F9;
 
-body{
-  margin: 0!important;
+
+body {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  padding-bottom: 200px;
+  margin: 0;
   width: auto;
   padding: 0;
   height: 100%;
   background-color: $white;
-  *{
-    box-sizing: border-box;
-  }
 }
 
+h1, h2, h3 {
+  font-family: "Avenir LT Std 65", "sans-serif";
+}
+
+hr{
+  margin-bottom: 10px;
+}
+
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+}
+
+.hidden{
+  display: none;
+}
+
+input, .btn{
+  &[disabled], .disabled{
+    opacity: 0.8;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}

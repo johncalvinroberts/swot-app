@@ -1,0 +1,23 @@
+.cardlist--outer{
+  border: 1px solid $black;
+  margin-bottom: 30px;
+  max-height: 377px;
+  overflow: scroll;
+  .cardlist--inner{
+    padding: 1rem 2rem;
+  }
+  textarea{
+    padding: 14px 10px;
+  }
+  h3{
+    display: inline-block;
+    margin-top: 0px;
+  }
+  .add-card-btn{
+    float: right;
+  }
+}
+.cardlist--list{
+  display: block;
+}
+

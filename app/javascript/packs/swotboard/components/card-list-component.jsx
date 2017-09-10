@@ -8,10 +8,16 @@ const CardList = React.createBackboneClass({
   mixins: [
      React.BackboneMixin('cards')
   ],
+  getInitialState: function() {
+    return {
+      description: '',
+      formVisible: false
+    }
+  },
   handleSubmit: function(e){
     e.preventDefault()
     let self = this
-    let description = this.refs.description.value
+    let description = this.state.description
     let card = new CardModel({
       description: description,
       category: this.props.category,
@@ -22,22 +28,36 @@ const CardList = React.createBackboneClass({
       self.props.collection.add(card)
       console.log('added the card')
     })
-    this.refs.description.value = ""
+    this.setState({
+      description: '',
+      formVisible: false
+    })
+  },
+  handleChange: function(e){
+    this.setState({description: e.target.value})
+  },
+  showAddCard: function(){
+    this.setState({formVisible: !this.state.formVisible})
   },
   render: function(){
     let cardList = this.getCollection().map((card)=>{
       return <CardComponent model={card} key={card.id} category={this.props.category}/>
     })
     return (
-        <div className="col-6">
+        <div className="cardlist--inner">
           <h3>{this.props.category}</h3>
-          <div className="add-card-outer">
-            <form onSubmit={this.handleSubmit}>
-              <input type="text" placeholder="enter description" ref="description"/>
-              <input type="submit" value="Submit"/>
-            </form>
-          </div>
+          <button className="btn add-card-btn" onClick={this.showAddCard}>Add</button>
+          <div className="cardlist--list">
           {cardList}
+          </div>
+          {this.state.formVisible ?
+            <div className="add-card-outer">
+              <form onSubmit={this.handleSubmit}>
+                <textarea type="text" placeholder="enter description" value={this.state.description} onChange={this.handleChange}/>
+                <input type="submit" value="Submit" disabled={!this.state.description}/>
+              </form>
+            </div>
+          :null }
         </div>
       )
   }
