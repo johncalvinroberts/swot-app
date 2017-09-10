@@ -25,6 +25,7 @@ const BoardsController = function(options){
           board: board
         })
         swotBoard.mainView.pageRender(boardView)
+        //render the card lists here??
       })
     }
   }

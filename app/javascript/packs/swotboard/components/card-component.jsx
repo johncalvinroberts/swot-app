@@ -8,7 +8,7 @@ const CardComponent = React.createBackboneClass({
   ],
   render: function(){
     return(
-      <div>This is a card</div>
+      <div>{this.getModel().get("description")}</div>
       )
   }
 })

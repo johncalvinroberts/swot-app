@@ -22,6 +22,7 @@ const CardList = React.createBackboneClass({
       self.props.collection.add(card)
       console.log('added the card')
     })
+    this.refs.description.value = ""
   },
   render: function(){
     let cardList = this.getCollection().map((card)=>{
@@ -29,7 +30,7 @@ const CardList = React.createBackboneClass({
     })
     return (
         <div className="col-6">
-          {this.props.category}
+          <h3>{this.props.category}</h3>
           <div className="add-card-outer">
             <form onSubmit={this.handleSubmit}>
               <input type="text" placeholder="enter description" ref="description"/>

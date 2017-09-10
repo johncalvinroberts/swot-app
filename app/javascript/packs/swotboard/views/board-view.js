@@ -4,6 +4,7 @@ import React from 'react'
 import BoardViewComponent from '../components/board-view-component'
 import CardListComponent from '../components/card-list-component'
 import CardsCollection from '../models/cards-collection'
+import CardModel from '../models/card-model'
 import ReactDOM from 'react-dom'
 import _ from 'lodash'
 
@@ -32,7 +33,7 @@ const BoardView = BaseView.extend({
   makeComponent: function(array, selector){
     let boardId = this.options.board.attributes.id
     let collection = new CardsCollection()
-    collection.add(array)
+    collection.set(array)
     let CardList = React.createFactory(CardListComponent)
     let cardList = CardList({
         collection: collection,

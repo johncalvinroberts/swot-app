@@ -17,6 +17,7 @@ const BoardsViewComponent = React.createBackboneClass({
       console.log('finished that shit')
       self.props.boards.add(board)
     })
+    this.refs.name.value = ""
   },
   render: function(){
     let boardList = this.props.boards.map(function(board){

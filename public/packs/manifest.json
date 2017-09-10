@@ -1,6 +1,5 @@
 {
   "swotboard.js": "http://0.0.0.0:8080/packs/swotboard.js",
-  "swotboard/components/add-card-component.js": "http://0.0.0.0:8080/packs/swotboard/components/add-card-component.js",
   "swotboard/components/board-list-item.js": "http://0.0.0.0:8080/packs/swotboard/components/board-list-item.js",
   "swotboard/components/board-view-component.js": "http://0.0.0.0:8080/packs/swotboard/components/board-view-component.js",
   "swotboard/components/boards-view-component.js": "http://0.0.0.0:8080/packs/swotboard/components/boards-view-component.js",
