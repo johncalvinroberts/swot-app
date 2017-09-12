@@ -3,11 +3,14 @@
   margin-bottom: 30px;
   max-height: 377px;
   overflow: scroll;
+  background-color: rgba($grey, 0.3);
   .cardlist--inner{
     padding: 1rem 2rem;
   }
   textarea{
     padding: 14px 10px;
+    width: 60%;
+    display: block;
   }
   h3{
     display: inline-block;
@@ -21,3 +24,12 @@
   display: block;
 }
 
+.card-outer{
+  background-color: RGBA(249, 249, 249, 1.00);
+  padding: 10px;
+  width: 90%;
+  box-shadow: 0 3px 19px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+}

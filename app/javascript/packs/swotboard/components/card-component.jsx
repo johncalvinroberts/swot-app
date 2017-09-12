@@ -2,13 +2,18 @@ import React from 'react'
 import ReactBackbone from  'react.backbone'
 import PropTypes from 'prop-types'
 
+
+const Types = {
+  CARD: 'card'
+}
+
 const CardComponent = React.createBackboneClass({
   mixins: [
      React.BackboneMixin('card')
   ],
   render: function(){
     return(
-      <div>{this.getModel().get("description")}</div>
+      <div className="card-outer" draggable="true">{this.getModel().get("description")}</div>
       )
   }
 })
