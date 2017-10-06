@@ -5,10 +5,13 @@ import CardListComponent from '../components/card-list-component'
 import CardsCollection from '../models/cards-collection'
 import CardModel from '../models/card-model'
 import ReactDOM from 'react-dom'
+import dragula from 'dragula/dist/dragula.min.js'
 
 const BoardView = BaseView.extend({
   initialize: function(options){
     this.options = options || {}
+    this.drake = {}
+    this.collectionArray = []
   },
   component: function(){
     let component = React.createFactory(BoardViewComponent)
@@ -22,15 +25,20 @@ const BoardView = BaseView.extend({
     let weaknesses = _.filter(cards, {category: "weaknesses"})
     let opportunities = _.filter(cards, {category: "opportunities"})
     let threats = _.filter(cards, {category: "threats"})
-
-    this.makeComponent(strengths, 'strengths'),
-    this.makeComponent(weaknesses, 'weaknesses'),
-    this.makeComponent(opportunities, 'opportunities'),
-    this.makeComponent(threats, 'threats')
+    let self = this
+    _.delay(function(){
+      self.makeComponent(strengths, 'strengths')
+      self.makeComponent(weaknesses, 'weaknesses')
+      self.makeComponent(opportunities, 'opportunities')
+      self.makeComponent(threats, 'threats')
+      self.createDraggables()
+      }, 300)
   },
   makeComponent: function(array, selector){
     let boardId = this.options.board.attributes.id
     let collection = new CardsCollection()
+    collection.category = selector
+    this.collectionArray.push(collection)
     collection.set(array)
     let CardList = React.createFactory(CardListComponent)
     let cardList = CardList({
@@ -38,9 +46,19 @@ const BoardView = BaseView.extend({
         category: selector,
         board_id: boardId
       })
-    _.delay(function(){
-      ReactDOM.render(cardList, document.getElementById(selector))
-    }, 300)
+
+    ReactDOM.render(cardList, document.getElementById(selector))
+  },
+  createDraggables: function(){
+    let self = this
+    let cardLists = Array.from(this.$el.find('.cardlist--list'))
+    this.drake = dragula(cardLists, {
+      copy: false
+    })
+    this.drake.on('drop', function(el, target, source, sibling) {
+      let targetCategory = target.closest('.cardlist--outer').id
+      let targetCollection = _.filter(self.collectionArray, {category: targetCategory})
+    })
   }
 })
 
