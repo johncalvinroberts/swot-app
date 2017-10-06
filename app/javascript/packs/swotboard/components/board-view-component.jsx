@@ -22,7 +22,13 @@ const BoardViewComponent = React.createBackboneClass({
         </div>
       </div>
     )
-  }
+  },
+  componentDidMount: function(){
+      var cardLists = document.querySelector('.cardlist--outer')
+      // this.drake = dragula(containers, {
+      //   copy: false
+      // })
+    }
 })
 
 export default BoardViewComponent

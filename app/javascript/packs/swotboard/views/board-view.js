@@ -1,4 +1,3 @@
-import Backbone from 'backbone/backbone'
 import BaseView from './baseview'
 import React from 'react'
 import BoardViewComponent from '../components/board-view-component'
@@ -6,7 +5,6 @@ import CardListComponent from '../components/card-list-component'
 import CardsCollection from '../models/cards-collection'
 import CardModel from '../models/card-model'
 import ReactDOM from 'react-dom'
-import _ from 'lodash'
 
 const BoardView = BaseView.extend({
   initialize: function(options){

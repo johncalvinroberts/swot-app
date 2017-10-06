@@ -7,6 +7,7 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 import $ from 'jquery/dist/jquery'
+import _ from 'lodash'
 import Backbone from 'backbone/backbone'
 import React from 'react'
 import Router from './swotboard/router'
@@ -34,7 +35,8 @@ SwotBoard.prototype.initialize = function(){
 SwotBoard.prototype.showApp = function(){
   this.mainView.render()
   var self = this
-  $('body').on('click', 'a[href^="/"]', function(e){
+  document.addEventListener('click', 'a[href^="/"]', function(e){
+  // $('body').on('click', 'a[href^="/"]', function(e){
     e.preventDefault()
     self.router.navigate($(this).attr('href'), {trigger: true})
   })

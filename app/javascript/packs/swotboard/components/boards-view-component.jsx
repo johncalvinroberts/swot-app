@@ -3,6 +3,7 @@ import ReactBackbone from  'react.backbone'
 import PropTypes from 'prop-types'
 import BoardListItem from './board-list-item'
 import BoardModel from '../models/board-model'
+import dragula from 'dragula/dist/dragula.min.js'
 
 const BoardsViewComponent = React.createBackboneClass({
   mixins: [
