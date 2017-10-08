@@ -65,7 +65,6 @@ const BoardView = BaseView.extend({
         self.changePosition(ogModel)
         return
       }
-      // el.remove()
       ogModel.set({
         category: targetCategory
       })
