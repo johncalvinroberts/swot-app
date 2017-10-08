@@ -21,7 +21,7 @@ class Api::CardsController < ApplicationController
 
   def update
     card = Card.find(params[:id])
-    if card.update_attributes(board_params)
+    if card.update_attributes(card_params)
       render json: card, status: :ok
     else
       render nothing: true, status: :unprocessable_entity

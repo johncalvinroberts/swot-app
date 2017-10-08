@@ -56,9 +56,27 @@ const BoardView = BaseView.extend({
       copy: false
     })
     this.drake.on('drop', function(el, target, source, sibling) {
+      console.log('drop')
       let targetCategory = target.closest('.cardlist--outer').id
-      let targetCollection = _.filter(self.collectionArray, {category: targetCategory})
+      let targetCollection = _.find(self.collectionArray, (cat) => cat.category == targetCategory)
+      let ogCollection = _.find(self.collectionArray, (cat) => cat.category === el.dataset.category)
+      let ogModel = ogCollection.get(el.dataset.id)
+      if(target === source){
+        self.changePosition(ogModel)
+        return
+      }
+      // el.remove()
+      ogModel.set({
+        category: targetCategory
+      })
+      targetCollection.add(ogModel, {silent: true})
+      ogModel.save().done(function(){
+        console.log('eyy')
+      })
     })
+  },
+  changePosition: function(model){
+    console.log('pssssitionchange')
   }
 })
 

@@ -13,7 +13,7 @@ const CardComponent = React.createBackboneClass({
   ],
   render: function(){
     return(
-      <div className="card-outer" id={this.getModel().get("id")}>{this.getModel().get("description")}</div>
+      <div className="card-outer" data-id={this.getModel().get("id")} data-category={this.getModel().get('category')}>{this.getModel().get("description")}</div>
       )
   }
 })
